@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">ExchangeApplicationWeb</string>
+    <string-array name="currencyList">
+        <item>036=["AUD" | "1"]
+        </item>
+        <item>EUR</item>
+        <item>GBP</item>
+        <item>SEK</item>
+        <item>CHF</item>
+        <item>UAH</item>
+        <item>JPY</item>
+        <item>AUD</item>
+        <item>BYN</item>
+        <item>BGN</item>
+        <item>HUF</item>
+        <item>BRL</item>
+        <item>DKK</item>
+        <item>AMD</item>
+        <item>KZT</item>
+        <item>CAD</item>
+        <item>NOK</item>
+        <item>XDR</item>
+        <item>SGD</item>
+    </string-array>
+</resources>
+

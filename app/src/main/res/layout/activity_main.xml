@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.aleksandrabramovski.exchangeapplicationweb.MainActivity">
+
+    <Spinner
+        android:id="@+id/currencySpinnerList"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_row="0"
+        android:layout_column="7"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_above="@+id/textViewCurrency"
+        android:layout_toStartOf="@+id/textViewIndex"
+        android:spinnerMode="dialog" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textViewIndex"
+        android:height="35dp"
+        android:textSize="16dp"
+        android:layout_row="0"
+        android:layout_column="1"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editTextInputValue"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_row="0"
+        android:layout_column="3"
+        android:backgroundTint="#817b7b"
+        android:layout_below="@+id/textViewCurrency" />
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editTextInputValue"
+        android:layout_alignParentStart="true"
+        android:layout_gravity="top|left"
+        android:id="@+id/radioGroup"
+        android:layout_row="0"
+        android:layout_column="4">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/radioButtonRUBtoUSD"
+            android:checked="false"
+            android:layout_below="@+id/radioButtonUSDtoRUB"
+            android:layout_alignParentStart="true"
+            android:backgroundTint="#817b7b"
+            android:buttonTint="#817b7b" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/radioButtonUSDtoRUB"
+            android:checked="true"
+            android:layout_below="@+id/radioGroup"
+            android:layout_alignParentStart="true"
+            android:backgroundTint="#817b7b"
+            android:allowUndo="false"
+            android:buttonTint="#817b7b" />
+    </RadioGroup>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Result"
+        android:id="@+id/textViewResultCurrencyExchange"
+        android:layout_row="0"
+        android:layout_column="5"
+        android:layout_below="@+id/buttonChange"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Convert"
+        android:onClick="onClickChange"
+        android:id="@+id/buttonChange"
+        android:layout_row="0"
+        android:layout_column="6"
+        android:layout_below="@+id/radioGroup"
+        android:layout_alignParentStart="true" />
+
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textViewCurrency"
+        android:textSize="25dp"
+        android:layout_below="@+id/textViewIndex"
+        android:layout_alignParentStart="true"
+        android:hint="Rate:"
+        android:layout_row="7"
+        android:layout_column="0"
+        android:layout_gravity="right|top" />
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignTop="@+id/radioGroup"
+        android:layout_toEndOf="@+id/radioGroup"
+        android:layout_above="@+id/buttonChange"
+        android:id="@+id/gridLayout">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:id="@+id/textViewInRoubles"
+            android:layout_row="0"
+            android:layout_column="0"
+            android:textSize="20dp"
+            android:text="Российский рубль" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="29dp"
+            android:id="@+id/textViewInCurrency"
+            android:layout_row="3"
+            android:layout_column="0"
+            android:textSize="20dp" />
+    </GridLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textViewDate"
+        android:layout_row="0"
+        android:layout_column="2"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true" />
+
+</RelativeLayout>
